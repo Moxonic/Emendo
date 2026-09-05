@@ -19,6 +19,15 @@ const nb = {
   'login.notConfigured':
     'Firebase er ikke satt opp ennå. Kopier .env.example til .env, fyll inn VITE_FIREBASE_* og start dev-serveren på nytt.',
   'login.failed': 'Innlogging feilet: {message}',
+  'login.yourLanguage': 'Språket ditt',
+  'login.tagline': 'Reparer skrivingen din – og husk rettelsene.',
+  'login.step1.name': 'Skriv',
+  'login.step1.body': 'en e-post eller en kort tekst, på norsk, engelsk, spansk eller tysk.',
+  'login.step2.name': 'Få retting',
+  'login.step2.body':
+    'en AI-lærer anslår CEFR-nivået ditt, kommenterer grammatikk, ordforråd og rettskriving, og skriver teksten din korrekt om.',
+  'login.step3.name': 'Husk det',
+  'login.step3.body': 'hver rettelse blir et flippkort. Sveip gjennom dem til de sitter.',
 
   'langGate.title': 'Velg språk',
   'langGate.subtitle': 'Hvilket språk vil du ha i menyene? Du kan endre dette senere.',

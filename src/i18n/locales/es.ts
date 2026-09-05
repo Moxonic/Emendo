@@ -17,6 +17,16 @@ const es: Partial<Record<MsgKey, string>> = {
   'login.notConfigured':
     'Firebase aún no está configurado. Copia .env.example a .env, rellena VITE_FIREBASE_* y reinicia el servidor de desarrollo.',
   'login.failed': 'Error al iniciar sesión: {message}',
+  'login.yourLanguage': 'Tu idioma',
+  'login.tagline': 'Repara tu escritura — y recuerda las correcciones.',
+  'login.step1.name': 'Escribe',
+  'login.step1.body': 'un correo o un texto breve, en noruego, inglés, español o alemán.',
+  'login.step2.name': 'Recibe correcciones',
+  'login.step2.body':
+    'un profesor con IA estima tu nivel MCER, comenta la gramática, el vocabulario y la ortografía, y reescribe tu texto correctamente.',
+  'login.step3.name': 'Recuérdalo',
+  'login.step3.body':
+    'cada corrección se convierte en una tarjeta. Deslízalas hasta que se te queden.',
 
   'langGate.title': 'Elige tu idioma',
   'langGate.subtitle': '¿En qué idioma quieres los menús? Puedes cambiarlo más tarde.',

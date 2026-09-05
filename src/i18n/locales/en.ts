@@ -17,6 +17,15 @@ const en: Record<MsgKey, string> = {
   'login.notConfigured':
     'Firebase is not set up yet. Copy .env.example to .env, fill in VITE_FIREBASE_* and restart the dev server.',
   'login.failed': 'Sign-in failed: {message}',
+  'login.yourLanguage': 'Your language',
+  'login.tagline': 'Mend your writing — and remember the fixes.',
+  'login.step1.name': 'Write',
+  'login.step1.body': 'an email or a short essay, in Norwegian, English, Spanish or German.',
+  'login.step2.name': 'Get corrected',
+  'login.step2.body':
+    'an AI teacher estimates your CEFR level, comments on grammar, vocabulary and spelling, and rewrites your text properly.',
+  'login.step3.name': 'Remember',
+  'login.step3.body': 'every correction becomes a flashcard. Swipe through them until they stick.',
 
   'langGate.title': 'Choose your language',
   'langGate.subtitle': 'Which language should the menus be in? You can change this later.',

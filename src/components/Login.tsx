@@ -1,19 +1,17 @@
 import { FcGoogle } from 'react-icons/fc';
 import { useAuth } from '../auth/AuthContext';
-import { useT, tEn } from '../i18n';
+import { useT, tEn, type MsgKey } from '../i18n';
 import { UI_LANGS } from '../i18n/config';
 import Wordmark from './Wordmark';
 import Flag from './Flag';
 
-// The pitch is intentionally always in English, whatever the browser language —
-// it's the one place a first-time visitor meets the app.
-const STEPS: [string, string][] = [
-  ['Write', 'an email or a short essay, in Norwegian, English, Spanish or German.'],
-  [
-    'Get corrected',
-    'an AI teacher estimates your CEFR level, comments on grammar, vocabulary and spelling, and rewrites your text properly.',
-  ],
-  ['Remember', 'every correction becomes a flashcard. Swipe through them until they stick.'],
+// The pitch follows the flag you pick: having just said which language you
+// speak, being told what the app does in that language is the point. Error
+// messages below stay English on purpose — see tEn().
+const STEP_KEYS: [MsgKey, MsgKey][] = [
+  ['login.step1.name', 'login.step1.body'],
+  ['login.step2.name', 'login.step2.body'],
+  ['login.step3.name', 'login.step3.body'],
 ];
 
 export default function Login({
@@ -35,7 +33,7 @@ export default function Login({
             your mistakes get translated into, and seeds the menu language. */}
         <div className="flex flex-col items-center gap-2">
           <span className="text-[11px] uppercase tracking-[0.18em] text-slate-400">
-            Your language
+            {t('login.yourLanguage')}
           </span>
           <div className="flex items-center gap-4">
             {UI_LANGS.map((l) => {
@@ -61,19 +59,17 @@ export default function Login({
         </div>
 
         <span className="h-px w-10 bg-slate-300" />
-        <p className="max-w-xs text-sm leading-relaxed text-slate-500">
-          Mend your writing — and remember the fixes.
-        </p>
+        <p className="max-w-xs text-sm leading-relaxed text-slate-500">{t('login.tagline')}</p>
       </div>
 
       <ol className="flex max-w-xs flex-col gap-4 text-left text-sm leading-relaxed text-slate-600">
-        {STEPS.map(([name, rest], i) => (
-          <li key={name} className="flex gap-3">
+        {STEP_KEYS.map(([nameKey, bodyKey], i) => (
+          <li key={nameKey} className="flex gap-3">
             <span className="mt-px flex h-5 w-5 shrink-0 items-center justify-center border border-slate-300 text-[11px] font-medium text-slate-500">
               {i + 1}
             </span>
             <span>
-              <span className="font-semibold text-slate-800">{name}</span> — {rest}
+              <span className="font-semibold text-slate-800">{t(nameKey)}</span> — {t(bodyKey)}
             </span>
           </li>
         ))}
