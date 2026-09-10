@@ -5,6 +5,7 @@ import { useI18n, tEn, type MsgKey } from '../i18n';
 import { subscribeWriting, retryGrading, markWritingError } from '../data/writings';
 import type { Writing } from '../types';
 import Spinner from '../components/Spinner';
+import NikolhausLoader from '../components/NikolhausLoader';
 import DiffText from '../components/DiffText';
 
 const CAT_KEYS: Record<string, MsgKey> = {
@@ -67,7 +68,10 @@ export default function Results() {
     return (
       <div className="flex flex-col items-center p-6 text-center">
         <h2 className="mb-1 text-lg font-semibold text-slate-700">{writing.title}</h2>
-        <Spinner label={t('results.gradingTitle')} />
+        <div className="flex flex-col items-center gap-3 py-10 text-slate-500">
+          <NikolhausLoader className="text-slate-700" size={180} />
+          <span className="text-sm">{t('results.gradingTitle')}</span>
+        </div>
         {slow && (
           <div className="mt-4 flex flex-col items-center gap-2">
             <p className="text-sm text-slate-500">{t('results.tooLong')}</p>
