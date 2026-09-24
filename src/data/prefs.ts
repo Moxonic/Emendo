@@ -31,7 +31,7 @@ export function subscribePrefs(
       onChange({ uiLang: data?.uiLang ?? null, motherLang: data?.motherLang ?? null });
     },
     (err) => {
-      console.error('[remenda] prefs subscription failed:', err);
+      console.error('[emendo] prefs subscription failed:', err);
       onError?.(err);
     },
   );

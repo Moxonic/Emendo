@@ -54,7 +54,7 @@ export default function App() {
   useEffect(() => {
     if (!user || !prefs || prefs.uiLang || !langChosen) return;
     saveMotherLang(user.uid, preLang).catch((e) =>
-      console.error('[remenda] saving your language failed', e),
+      console.error('[emendo] saving your language failed', e),
     );
   }, [user, prefs, langChosen, preLang]);
 

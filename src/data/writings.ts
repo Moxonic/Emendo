@@ -84,7 +84,7 @@ export function subscribeWritings(
     q,
     (snap) => onChange(snap.docs.map((d) => toWriting(d.id, d.data()))),
     (err) => {
-      console.error('[remenda] writings subscription failed:', err);
+      console.error('[emendo] writings subscription failed:', err);
       onError?.(err);
     },
   );
@@ -100,7 +100,7 @@ export function subscribeWriting(
     writingRef(uid, id),
     (snap) => onChange(snap.exists() ? toWriting(snap.id, snap.data()) : null),
     (err) => {
-      console.error('[remenda] writing subscription failed:', err);
+      console.error('[emendo] writing subscription failed:', err);
       onError?.(err);
     },
   );

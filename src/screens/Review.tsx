@@ -107,7 +107,7 @@ export default function Review() {
       try {
         await recordReview(user!.uid, cur, persist === 'promote');
       } catch (e) {
-        console.error('[remenda] recordReview failed', e);
+        console.error('[emendo] recordReview failed', e);
       }
     }
   }

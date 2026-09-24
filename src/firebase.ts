@@ -17,7 +17,7 @@ export const isFirebaseConfigured = Boolean(
 
 if (!isFirebaseConfigured) {
   console.warn(
-    '[remenda] Firebase is not configured. Copy .env.example to .env, ' +
+    '[emendo] Firebase is not configured. Copy .env.example to .env, ' +
       'fill in the VITE_FIREBASE_* values and restart the dev server.',
   );
 }
